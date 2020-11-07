@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7933f3f14994b1499ddc93e55cad38f, type: 3}
+  m_Name: Wall
+  m_EditorClassIdentifier: 
+  UnitID: 2
+  unitAttackType: 0
+  unitName: Wall
+  weight: 10
+  hp: 37
+  armor: 21
+  stamina: 1
+  attackRange: 1
+  damageRange: {x: 1, y: 2}
+  icon: {fileID: 21300000, guid: 52d6d6e793ba95c46a58a530309d530a, type: 3}
+  buyRequirements:
+  - itemType: 1
+    amount: 3
+  - itemType: 2
+    amount: 1
+  - itemType: 4
+    amount: 2
