@@ -51,10 +51,11 @@ public class Interaction : MonoBehaviour
                     if (clickedAgent != null)
                     {
                         SelectWorldAgentIfItsPlayer(clickedAgent);
-                        if (!clickedAgent.MyCountry.isPlayerCountry)
-                        {
-                            OpenCountryInfoUI(clickedAgent.MyCountry);
-                        }
+                        //Open other country info
+                        //if (!clickedAgent.MyCountry.isPlayerCountry)
+                        //{
+                        //    OpenCountryInfoUI(clickedAgent.MyCountry);
+                        //}
                     }
                     else
                     {
