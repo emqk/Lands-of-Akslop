@@ -51,6 +51,10 @@ public class RTSCamera : MonoBehaviour
         float ver = inputMoveVector.y;
         float scroll = Input.GetAxisRaw("Mouse ScrollWheel");
 
+#if UNITY_ANDROID
+        targetPos += new Vector3(inputMoveVector.x / Screen.width, 0, inputMoveVector.y / Screen.height) * 500;
+        transform.position = Vector3.MoveTowards(transform.position, targetPos, 9999 * Time.unscaledDeltaTime);
+#else
         Vector3 newPosOffsset = new Vector3();
         newPosOffsset += Vector3.forward * ver;
         newPosOffsset += -Vector3.left * hor;
@@ -61,10 +65,6 @@ public class RTSCamera : MonoBehaviour
         Vector3 moveVec = newPosOffsset.normalized;
         targetPos += moveVec * movementSpeed * Time.unscaledDeltaTime;
         targetPos.y = targetY;
-
-#if UNITY_ANDROID
-        transform.position += new Vector3(inputMoveVector.x, 0, inputMoveVector.y) * movementSpeed/2 * Time.unscaledDeltaTime;
-#else
         transform.position = Vector3.Lerp(transform.position, targetPos, Time.unscaledDeltaTime * movementSpeed / 2f);
 #endif
     }

@@ -122,7 +122,7 @@ public class WorldAgent : TargetableObject
         {
             if (destinationObject.GetWorldActorDockedInObject() == null)
             {
-                Debug.Log("Object reached");
+                Debug.Log("Object reached", destinationObject.gameObject);
                 destinationObject.OnThisObjectReached(this);
             }
 

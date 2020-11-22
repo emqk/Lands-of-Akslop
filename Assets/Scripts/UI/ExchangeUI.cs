@@ -39,7 +39,7 @@ public class ExchangeUI : MonoBehaviour
     {
         if (enteredAgent == dockAgent)
         {
-            Debug.LogError("Can not open Exchange UI, because both objects are the same");
+            Debug.Log("Can not open Exchange UI, because both objects are the same");
             return;
         }
         UIManager.instance.WorldAgentPanel.Close();
