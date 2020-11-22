@@ -71,12 +71,15 @@ public class UIManager : MonoBehaviour
         instance = this;
     }
 
-    public bool IsAnyPanelOpened_NotCountPause()
+    public bool CanMoveCamera()
     {
-        if (PauseMenu.IsEnabled() && openedUIPanels == 1)
-            return false;
+        int openedTemp = openedUIPanels;
+        if (PauseMenu.IsEnabled())
+            openedTemp--;
+        if (StartingBattleUI.instance.IsEnabled())
+            openedTemp--;
 
-        return openedUIPanels > 0;
+        return openedTemp > 0;
     }
 
     public void OnUIPanelOpen(bool openWithBackground = true)

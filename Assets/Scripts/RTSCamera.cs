@@ -43,6 +43,9 @@ public class RTSCamera : MonoBehaviour
 
     void Update()
     {
+        if (UIManager.instance.CanMoveCamera())
+            return;
+
         Vector2 inputMoveVector = InputManager.instance.GetMoveVector();
         float hor = inputMoveVector.x;
         float ver = inputMoveVector.y;
@@ -58,9 +61,6 @@ public class RTSCamera : MonoBehaviour
         Vector3 moveVec = newPosOffsset.normalized;
         targetPos += moveVec * movementSpeed * Time.unscaledDeltaTime;
         targetPos.y = targetY;
-
-        if (UIManager.instance.IsAnyPanelOpened_NotCountPause())
-            return;
 
 #if UNITY_ANDROID
         transform.position += new Vector3(inputMoveVector.x, 0, inputMoveVector.y) * movementSpeed/2 * Time.unscaledDeltaTime;

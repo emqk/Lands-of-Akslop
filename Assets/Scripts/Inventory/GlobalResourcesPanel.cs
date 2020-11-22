@@ -22,7 +22,7 @@ public class GlobalResourcesPanel : MonoBehaviour
         if (playerCountry != null)
             RefreshUI(playerCountry.Inventory);
         else
-            Debug.LogError("PlayerCountry == null!");
+            Debug.Log("PlayerCountry == null!");
     }
 
     void RefreshUI(Inventory inventory)

@@ -231,7 +231,7 @@ public class Country
         foreach (Country item in enemyCountries)
         {
             //Is enemy army strength stronger than my army
-            Debug.LogError(countryName + " - > " + item.countryName + " Trying to make peace: my: " + GetArmyStrength() + " other: " + item.GetArmyStrength());
+            Debug.Log(countryName + " - > " + item.countryName + " Trying to make peace: my: " + GetArmyStrength() + " other: " + item.GetArmyStrength());
             if (item.GetArmyStrength() > GetArmyStrength() && item.GetArmyStrength() < GetArmyStrength() * 1.5f)
             {
                 CountryRelation countryRelation = CountryManager.instance.GetRelationBetweenCountries(this, item);

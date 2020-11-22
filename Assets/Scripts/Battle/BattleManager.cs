@@ -165,7 +165,7 @@ public class BattleManager : MonoBehaviour
 
     public static void FinishBattle()
     {
-        Debug.LogError("FinishBattle");     
+        Debug.Log("FinishBattle");     
         //TimeManager.SetDefaultTime();     
         battleResult.Reset();
         isDuringBattle = false;

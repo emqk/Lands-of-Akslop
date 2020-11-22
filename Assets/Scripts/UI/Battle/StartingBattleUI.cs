@@ -9,6 +9,11 @@ public class StartingBattleUI : MonoBehaviour
         instance = this;
     }
 
+    public bool IsEnabled()
+    {
+        return gameObject.activeSelf;
+    }
+
     public void Open()
     {
         gameObject.SetActive(true);

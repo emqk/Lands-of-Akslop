@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: dfbc14ba3a80d8b48b3d69a772444f0a,
     type: 2}
   m_UseShadowmask: 1
@@ -7161,7 +7162,7 @@ PrefabInstance:
       propertyPath: worldEventData.description
       value: 'There is no way out from here!
 
-        Give as your items or fight!'
+        Give us your items or fight!'
       objectReference: {fileID: 0}
     - target: {fileID: 1957302695875925305, guid: 66f421752a1af8e478f7cf64216a42cc,
         type: 3}
@@ -10971,7 +10972,7 @@ Terrain:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 933191764}
   m_Enabled: 1
-  serializedVersion: 5
+  serializedVersion: 6
   m_TerrainData: {fileID: 15600000, guid: a79ed994ce8041d45ae8866f352ee151, type: 2}
   m_TreeDistance: 180
   m_TreeBillboardDistance: 180
@@ -10994,6 +10995,7 @@ Terrain:
   m_ScaleInLightmap: 0.0256
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
   m_GroupingID: 0
+  m_RenderingLayerMask: 1
   m_AllowAutoConnect: 1
 --- !u!4 &933191767
 Transform:

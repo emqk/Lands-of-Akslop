@@ -59,7 +59,7 @@ public abstract class TargetableObject : MonoBehaviour
         {
             if (BattleManager.isDuringBattle == false && !RTSCamera.IsZoomingOnBattleStart)
             {
-                if (enteringWorldAgent.myCountry.isPlayerCountry || myCountry.isPlayerCountry)
+                if (enteringWorldAgent.MyCountry.isPlayerCountry || myCountry.isPlayerCountry)
                 {
                     RTSCamera.instance.LookAtTransform(transform.position);
                     StartingBattleUI.instance.Open();
