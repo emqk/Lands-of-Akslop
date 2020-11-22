@@ -59,7 +59,14 @@ public class RTSCamera : MonoBehaviour
         targetPos += moveVec * movementSpeed * Time.unscaledDeltaTime;
         targetPos.y = targetY;
 
+        if (UIManager.instance.IsAnyPanelOpened_NotCountPause())
+            return;
+
+#if UNITY_ANDROID
+        transform.position += new Vector3(inputMoveVector.x, 0, inputMoveVector.y) * movementSpeed/2 * Time.unscaledDeltaTime;
+#else
         transform.position = Vector3.Lerp(transform.position, targetPos, Time.unscaledDeltaTime * movementSpeed / 2f);
+#endif
     }
 
 

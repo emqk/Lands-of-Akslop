@@ -71,6 +71,14 @@ public class UIManager : MonoBehaviour
         instance = this;
     }
 
+    public bool IsAnyPanelOpened_NotCountPause()
+    {
+        if (PauseMenu.IsEnabled() && openedUIPanels == 1)
+            return false;
+
+        return openedUIPanels > 0;
+    }
+
     public void OnUIPanelOpen(bool openWithBackground = true)
     {
         TimeManager.SetPauseTime();
