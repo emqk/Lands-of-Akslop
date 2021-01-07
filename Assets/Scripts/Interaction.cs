@@ -74,10 +74,10 @@ public class Interaction : MonoBehaviour
                                 {
                                     SelectBuilding(clickedBuilding);
                                 }
-                                else if (!clickedBuilding.MyCountry.isDefaultCountry)
-                                {
-                                    OpenCountryInfoUI(clickedBuilding.MyCountry);
-                                }
+                                //else if (!clickedBuilding.MyCountry.isDefaultCountry)
+                                //{
+                                //    OpenCountryInfoUI(clickedBuilding.MyCountry);
+                                //}
                             }
                         }
                     }
